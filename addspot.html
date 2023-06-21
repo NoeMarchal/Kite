@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<body background="Surf.jpg">
+	<title> contact </title>
+	<h4><a 
+		href="site_kite.html">
+		<center><img src= "home.png" width="65" height="65" alt="home"></center> 
+	</a></h4>
+	<style>
+		h1
+{
+	color: black;
+	width:10%;
+	text-align:center;
+	margin: 0 auto;
+	position: relative;
+	top: -50px;
+	left: 0px;
+	padding: 18px;
+}
+h4
+{	
+		position: relative;
+		width: 0%;
+		top: 0px;
+		left: 0px;
+}
+h2{
+	text-align: center;
+}
+input{
+	border-radius: 25px;
+	padding: 15px;
+	background-color: blanchedalmond;
+	top: 100px;
+	right: -850px;
+	position: relative;
+}
+textarea{
+	border-radius: 20px;
+	padding: 15px;
+	background-color: blanchedalmond;
+	position: relative;
+	top: 130px;
+	right: -950px;
+}
+button{
+	border-radius: 25px;
+	padding: 15px;
+	background-color: blanchedalmond;
+	position: relative;
+	top: 150px;
+	right: -1120px;
+}
+p{
+	color: black;
+	background-image:url(\ocean.jpg);
+	font-size: 1.4rem;
+	position: absolute;
+}
+
+</style>
+	</head>
+	<body>
+		<p style="float:right">
+			<h1><span> Add spot!</span></h1>
+			<strong><p>Welcome to our kite spot submission page!<br>
+				Here, you can share your knowledge and add new kite spots that you have discovered.<br>
+				We are excited to gather your contributions and<br>
+				expand our database of kiteboarding destinations.<br>
+				Please fill out the form below, providing as much detailed<br>
+				such as the spot's name, location, wind conditions, best times for kiting,<br>
+				and any other relevant details.<br>
+				Your expertise and passion for kiteboarding help us<br>
+				create a valuable resource for the global kiteboarding community.<br>
+				Thank you in advance for your collaboration, and<br>
+				don't forget to check our website regularly to explore new exciting spots!</p></strong>
+    		<form id="windForm" onsubmit="sendEmail(); reset(); return false;">
+                <input id="spot name" type="text" placeholder="spot name" required>
+                <input id="where is he" type="text" placeholder="where is he" required>
+				<input id="Email" type="email" placeholder="your Email" required><br>
+                <textarea id="description" rows="4" placeholder="a short description of the spot"></textarea>
+				<textarea id="link" rows="4" placeholder="link for weather data if it exists"></textarea><br>
+                <button type="submit">Sent</button>
+            </form>
+			<script src="https://smtpjs.com/v3/smtp.js"></script>
+			<script>
+					function sendEmail() {
+           			 const body = "spot name : " + document.getElementById("spot name").value + "<br>" +
+                	"where is he : " + document.getElementById("where is he").value + "<br>" +
+					"Email : " + document.getElementById("Email").value + "<br>" +
+                    "description : " + document.getElementById("description").value + "<br>" +
+					"link : " + document.getElementById("link").value;
+					Email.send({
+					Host: "smtp.elasticemail.com",
+					Username: "thespotmap00@gmail.com",
+					Password: "5B43BD64307E4BF063F3E76427DEAE2CE8A3",
+					To: "thespotmap00@gmail.com",
+					From: "thespotmap00@gmail.com",
+					Subject: "Add spot",
+					Body: body,
+				}).then(
+					message => alert(message)
+				);
+			 }
+			</script>
+	</body>
+
+</html>
