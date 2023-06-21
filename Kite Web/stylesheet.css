@@ -1,0 +1,48 @@
+#titre{
+	color: black;
+	background-image:url(\ocean.jpg);
+	width:10%;
+	position: relative;
+	top: -200px;
+	left: 0px;
+	padding: 18px;
+    margin: 0 auto;
+}
+
+h3{
+    color: black;
+    position: relative;
+    font-size: large;
+    top:  -180px;
+    left: 0px
+}
+
+h4
+{	
+		position: relative;
+		width: 0%;
+		top: 0px;
+		left: 0px;
+}
+
+h6{
+    color: black;
+    position: relative;
+    font-size: large;
+    top:  -425px;
+    left: 550px
+}
+
+h2{
+    position: relative;
+    width: 0%;
+    top: -80px;
+    left: 1400px;
+}
+
+h5{
+    position: relative;
+    width: 0%;
+    top: -160px;
+    left: 1340px;
+}

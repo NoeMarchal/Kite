@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"> 	                   
+		<body background="Surf.jpg">
+			<title> WindKite </title>
+            <style>
+                #titre{
+						color: whitesmoke;
+						width:50%;
+						text-align:center;
+						position: top;
+						padding: 20px;
+						margin: auto;
+						
+					}
+				h3{
+						color: whitesmoke;
+						background-image:url(\ocean.jpg);
+						font-size: 1.0rem;
+						position: absolute;
+						right: 15px;
+						top: 40px;
+					}							
+
+				h4
+				{	
+						position: absolute;
+						width: 0%;
+						background-color: white;
+						top: -200px;
+						left: 1470px;
+				}
+
+				/* Style pour le menu principal */
+				nav ul {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					background-color: black;
+					position: absolute;
+					display: inline-table;
+				}
+		
+				nav ul li {
+					float: left;
+				}
+		
+				nav ul li a {
+					display: block;
+					padding: 10px 20px;
+					color: #fff;
+					font-size: 25px;
+					text-decoration: none;
+				}
+		
+				nav ul li:hover {
+					background-color: #555;
+				}
+		
+				/* Style pour les sous-menus */
+				nav ul ul {
+					display: none;
+					position: absolute;
+					top: 100%;
+				}
+		
+				nav ul ul li {
+					float: none;
+					width: 200px;
+				}
+		
+				nav ul ul a {
+					color: #fff;
+					padding: 10px 20px;
+					font-size: 14px;
+					text-decoration: none;
+				}
+		
+				nav ul ul a:hover {
+					background-color: #555;
+				}
+		
+				/* Afficher les sous-menus au survol */
+				nav ul li:hover > ul {
+					display: inherit;
+				}
+		
+
+				h5{
+					color: black;
+					background-image:url(\ocean.jpg);
+					font-size: x-large;
+					position: absolute;
+					top: 100px;
+					left: 250px;
+				}
+				
+  				#search{
+   					 padding: 4px 10px;
+   					 border: 0;
+    				font-size: 16px;
+					width: 180px;
+					position: relative;
+					left: 200px;
+					border-radius:25px;
+					top: -85px;
+  				}
+ 				 #button {
+   					width:5%;
+					border: none;
+					border-radius:25px;
+					position: absolute;
+					cursor: pointer;
+					left: 390px;
+					top: 40px;
+ 				 }		
+				 .main-head{
+					background-color: black;
+					height: 80px;
+					position: static;
+				 }
+            </style>
+    	</head>
+	<header class="main-head">
+		<p style="float:right">
+       <left><nav>
+            <ul>
+                <li class="deroulant"><a href="#">+</a>
+                <ul class="sous">
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="credits.html">Credits</a></li>
+                    <li><a href="addspot.html">Add spot</a></li>
+                </ul>
+            </li>
+        </nav></left>
+        <h1><div id="titre">The Spotmap</div></h1>
+
+			<input type="search" id="search" value="" placeholder="Find your spot here!!" onchange="onpenpage()" required>
+			<input type="button" id="button" value="search" onclick="onpenpage()">
+
+			<script>
+				function onpenpage(){
+					var a = document.getElementById("search").value;
+
+					if (a === "Wissant"){
+						window.open("wissant.html");
+					}
+					if (a === "Tarifa"){
+						window.open("Tarifa.html");
+					}
+				}
+			</script>
+    		<h3><p>Find the spot you need everywhere you want!</p></h3>
+		</header>
+		<body>
+            <h5>Hey everyone, how are you ?<br>
+                We are going to introduce ourselves:<br>
+                We are two young guys who love water and wind spot.<br>
+                We were always looking for other spots and there conditions<br>
+                 but we rarely found them on a website.<br>
+                That's why we created that website,<br>
+                hope it can help you to find the spot you want!</h5>
+            <h4><a 
+                href="Kite_Web.html">
+                <center><img src= "lieu.png" width="50" height="50" alt="Map"></center> 
+            </a></h4>
+            
+       	</body>
+</html>
+
+

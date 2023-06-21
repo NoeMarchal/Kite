@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<body background="Surf.jpg">
+	<title> contact </title>
+	<h4><a 
+		href="site_kite.html">
+		<center><img src= "home.png" width="65" height="65" alt="home"></center> 
+	</a></h4>
+	<style>
+		h1
+{
+	color: black;
+	width:10%;
+	text-align:center;
+	position: relative;
+	top: -50px;
+	left: 0px;
+	padding: 18px;
+	margin: 0 auto;
+}
+h4
+{	
+		position: relative;
+		width: 0%;
+		top: 0px;
+		left: 0px;
+}
+
+input{
+	border-radius: 25px;
+	padding: 15px;
+	background-color: blanchedalmond;
+	left: 150px;
+	position: relative;
+}
+textarea{
+	border-radius: 20px;
+	padding: 15px;
+	background-color: blanchedalmond;
+	top: -185px;
+	left: 400px;
+	position: relative;
+}
+button{
+	border-radius: 25px;
+	padding: 15px;
+	background-color: blanchedalmond;
+	top: -200px;
+	left: 550px;
+	position: relative;
+}
+p{
+	color: black;
+	background-image:url(\ocean.jpg);
+	font-size: 1.4rem;
+	position: absolute;
+	top: 200px;
+	left: 800px;
+}
+	</style>
+	</head>
+	<body>
+		<p style="float:right">
+			<h1><span> Contact us</span></h1>
+			<strong><p>Our dedicated team is ready to address all your questions, inquiries, or concerns.<br>
+			   Please don't hesitate to contact us using the form below.<br>
+			   We take pride in providing exceptional customer service and delivering a seamless experience for you.<br>
+			   Your feedback is also welcome as it helps us continuously improve our products and services.<br>
+			   We are eager to hear from you and assist you in any way we can.</p></strong>
+    		<form id="windForm" onsubmit="sendEmail(); reset(); return false;">
+                <input id="name" type="text" placeholder="Last Name" required><br>
+				<br>
+                <input id="firstname" type="text" placeholder="Name" required><br>
+				<br>
+				<input id="Email" type="email" placeholder="Email" required><br>
+				<br>
+                <input id="phone" type="text" placeholder="Phone Number" required><br>
+				<br>
+                <textarea id="message" rows="4" placeholder="Why do you want to contact us?"></textarea><br>
+				<br>
+                <button type="submit">Sent</button>
+            </form>
+			<script src="https://smtpjs.com/v3/smtp.js"></script>
+			<script>
+					function sendEmail() {
+           			 const body = "Nom : " + document.getElementById("name").value + "<br>" +
+                	"Prénom : " + document.getElementById("firstname").value + "<br>" +
+					"Email : " + document.getElementById("Email").value + "<br>" +
+               		"Téléphone : " + document.getElementById("phone").value + "<br>" +
+               		"Message : " + document.getElementById("message").value;
+					Email.send({
+					Host: "smtp.elasticemail.com",
+					Username: "thespotmap00@gmail.com",
+					Password: "5B43BD64307E4BF063F3E76427DEAE2CE8A3",
+					To: "thespotmap00@gmail.com",
+					From: "thespotmap00@gmail.com",
+					Subject: "Contact Kite Site Web",
+					Body: body,
+				}).then(
+					message => alert(message)
+				);
+			 }
+			</script>
+	</body>
+
+</html>
